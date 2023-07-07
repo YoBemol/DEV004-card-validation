@@ -1,49 +1,47 @@
 const validator = {
-  // ...
+  // Algoritmo de Luhn
+  //1. Tomar numero original/tarjeta
+  //2. Reversar numero
+  //3. Doblar cada segundo digito (indice par)
+  //3.1 Sumar los digitos mayores a 9
+  //4. Sumar todos los digitos, si es divisible para 10 es un numero valido
+
   isValid(str) {
-    //funcion con el algoritmo de luhn
-    //revierte numero ingresado 
+    //revertir numero
     const strReverse = str.split('').reverse().join('');
-    //console.log(strReverse);
-    //console.log(typeof strReverse);
-    //ingresa en const par numeros de un indice
-    const par = [];
-    let sumaPar = 0;
+    // console.log('reverse', strReverse);
+    const parIndex = [];
+    const imparIndex = [];
     for (let i = 0; i < strReverse.length; i++) {
       let multPar = 0;
-      //si es indice par multiplica por 2
+      //multiplicar numeros de indice par por 2
       if (i % 2 !== 0) {
         multPar = strReverse[i] * 2;
-        //toma el primer digito de un numero 
-        //console.log(multPar);
-        const splitPar = parseInt(multPar.toString().split(''));
-        //console.log(splitPar);
-        par.push(splitPar);
-        //toma el segundo digito si el numero tiene dos digitos
-        if (multPar > 9) {
-          sumaPar = parseInt(multPar.toString().charAt(1))
-
-          //console.log(suma);
-          par.push(sumaPar)
-        }
+        // console.log('multPar',multPar);
+        //separamos los valores de dos digitos y sumamos
+        // console.log('prueba', multPar.toString().split(''))
+        const splitPar = multPar.toString().split('');
+        // console.log('splitPar',splitPar);
+        parIndex.push(splitPar);
       } else {
-        //si es indice impar va directo a const par despues de *1
-        multPar = strReverse[i] * 1;
-
-        par.push(multPar);
+        imparIndex.push(strReverse[i]);
       }
+    }
+    // console.log('parIndex', parIndex.flat());
+    // console.log('imparIndex', imparIndex);
+    //pasar de string a numero
+    const parNumbers = parIndex.flat().map(e => parseInt(e));
+    // console.log('parNumbers', parNumbers);
+    const imparNumbers = imparIndex.map(e => parseInt(e));
+    // console.log('imparNumbers', imparNumbers);
+    const arrTotal = parNumbers.concat(imparNumbers);
+    // console.log(arrTotal);
+    const sumaArr = arrTotal.reduce((a, b) => a + b);
+    // console.log(sumaArr);
 
-    }
-    //console.log(par);
-    //va sumando cada numero
-    let sumaArr = 0;
-    for (let i = 0; i < par.length; i++) {
-      sumaArr += par[i]; //sumaArr = sumaArr + par[i]
-    }
-    //console.log(sumaArr);
-    //valida que el modulo de 10 de la suma sea 0, que el valor sea diferente de 0 
-    //y que el numero sea mayor a 12
-    if ((sumaArr % 10 === 0) && (sumaArr !== 0) && (par.length >12)) {
+    // validar que el modulo de la suma sea 0, que el valor sea diferente de 0 
+    // y que el numero sea mayor a 12  && (parNumbers.length >12)
+    if ((sumaArr % 10 === 0) && (sumaArr !== 0)) {
       //console.log("Tarjeta valida");
       return true;
     }
@@ -65,5 +63,3 @@ const validator = {
 };
 
 export default validator;
-
-

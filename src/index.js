@@ -5,9 +5,9 @@ document.getElementById("btn").addEventListener("click", function () {
   const valor = validator.isValid(document.getElementById("cardnumber").value);
   //console.log(valor);
   if (valor === true) {
-    document.getElementById("respuesta").innerHTML = 'Numero de tarjeta valido';
+    document.getElementById("respuesta").innerHTML = 'Número de tarjeta válido';
   } else {
-    document.getElementById("respuesta").innerHTML = 'Numero de tarjeta no valido';
+    document.getElementById("respuesta").innerHTML = 'Número de tarjeta no válido';
   }
 });
 //llama a boton y agraga el evento click para que enmascare el valor despues de hacer click
