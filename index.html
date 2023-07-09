@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guía Hoteles</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Hoteles</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Nosotros</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="./precios.html">Precios</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Términos y condiciones</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <header class="jumbotron">
+    <h1 id="title">Hoteles</h1>
+  </header>
+
+  <div class="d-flex flex-wrap">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+
+        <!-- <main class="container">
+          <div class="w-input">
+            <input type="text" minlength="10" maxlength="20" id="cardnumber" placeholder="Ingresa el número de tarjeta"
+              required />
+            <button id="btn">Validar</button>
+            <p id="respuesta"></p>
+          </div>
+        </main> -->
+
+
+        <!-- CARD DESTINOS -->
+        <div class="d-flex flex-wrap">
+          <div class="container">
+            <div class="row">
+              <div class=" card card-hotel d-flex flex-column justify-content-between ml-2">
+                <div class="card-body">
+                  <h5 class="card-title">Hotel Costa </h5>
+                  <h6 class="card-subtitle text-muted">Ruta del sol</h6><img class="card-img-top" src="images/beach.jpg"
+                    alt="responsive image">
+                  <p class="card-text">Visita nuestras hermosas playas.</p>
+                </div>
+                <div>
+                  <p><button class="btn btn-primary btn-leer" data-toggle="popover"
+                      title="Ofertas especiales por tiempo limitado">Reserva</button></p>
+                </div>
+              </div>
+
+              <div class="card card-hotel d-flex flex-column justify-content-between ml-2">
+                <div class="card-body">
+                  <h5 class="card-title">Hotel Sierra </h5>
+                  <h6 class="card-subtitle text-muted">Avenida de los volcanes</h6><img class="card-img-top"
+                    src="images/volcan.jpg" alt="responsive image" height="141.12">
+                  <p class="card-text">Descubre el encanto de la sierra.</p>
+                </div>
+                <div>
+                  <p><button class="btn btn-primary btn-leer">Reserva</button></p>
+                </div>
+              </div>
+
+              <div class="card card-hotel d-flex flex-column justify-content-between ml-2">
+                <div class="card-body">
+                  <h5>Hotel Oriente </h5>
+                  <h6 class="card-subtitle text-muted">Aventura</h6><img class="card-img-top" src="images/amazonia.jpg"
+                    alt="responsive image">
+                  <p class="card-text">Viaja al exótico oriente</p>
+                </div>
+                <div>
+                  <p><button class="btn btn-primary btn-leer">Reserva</button></p>
+                </div>
+              </div>
+
+              <div class="card card-hotel d-flex flex-column justify-content-between ml-2">
+                <div class="card-body">
+                  <h5>Hotel Insular</h5>
+                  <h6 class="card-subtitle text-muted">Laboratorio natural</h6><img class="card-img-top"
+                    src="images/galapagos.jpg" alt="responsive image">
+                  <p class="card-text">Aventúrate en las islas encantadas.</p>
+                </div>
+                <div>
+                  <p><button class="btn btn-primary btn-leer">Reserva</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO CARD VALIDATION -->
+        <div class="containerA">
+          <div class="row justify-content-center">
+
+            <div class="col-md-4 text-center p-3">
+              <h4>Vacaciona con nosotros </h4>
+              <p>Contamos con una amplia variedad de hoteles.</p>
+              <p>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  Pagos con tarjeta de crédito
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  Prepárate para tu próxima aventura!!! Ingresa tus datos.                  
+                  <input type="text" minlength="10" maxlength="20" id="cardnumber"
+                    placeholder="Ingresa el número de tarjeta" required />
+                    <br>
+                  <button id="btn" type="button" class="btn btn-success">Validar</button>
+                  <p id="respuesta"></p>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 d-flex flex-column">
+                <h4>Síguenos</h4>
+                <a class='btn-1' href="https://www.linkedin.com/in/belenmolinazaruma/">LinkedIn</a>
+                <a class='btn-1' href="https://github.com/YoBemol">Github</a>
+
+              </div>
+
+              <div class="col-sm-4 d-flex flex-column align-items-center">
+                <address>
+                  <h4>Oficina Central</h4>
+                  <p><span class="oi oi-home footer-address-icon"></span>Quito, Ecuador</p>
+                  <!-- <p><span class="oi oi-phone footer-address-icon"></span>+59302123456</p>
+                <p><span class="oi oi-inbox footer-address-icon"></span>contacto@guiahoteles.com</p> -->
+                </address>
+              </div>
+
+              <div class="col-sm-4 d-flex flex-column align-items-end">
+                <h4>Explora más</h4>
+                <!-- <a class='btn-1' href="#">Nosotros</a>
+          <a class='btn-1' href="#">Precios</a> -->
+                <a class='btn-1' href="#">Blog</a>
+                <a class='btn-1' href="#">FAQs</a>
+              </div>
+              <div class="row">
+                <div class="col-md-12 copy">
+                  <p class="text-center">&copy; Copyright 2023 - Belen Molina. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <script src="index.js" type="module"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>
