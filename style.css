@@ -1,56 +1,3 @@
-/* body {
-    text-align: center;
-    color: #202a47;
-    margin: 0;
-    padding: 0;
-    line-height: 2;
-    font-size: 1.5rem;
-    display: block;
-    background-image: url(https://cdn.pixabay.com/photo/2014/10/22/17/34/los-angeles-498285_960_720.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;  
-
-}
-
-#title {
-    background: #dfcfff;
-    margin-top: 0;
-    color: #202a47;
-}
-
-#p {
-    background: #dfcfff;
-    color: #202a47;
-
-}
-
-.container {
-
-    width: 100%;
-    min-height: 50px;
-    background: white;
-    justify-content: center;
-}
-
-.w-input input {
-    margin-top: 0;
-    width: 50%;
-    height: 50px;
-    outline: none;
-    border: 4px solid #a6c1ee;
-    padding: 10px 30px 10px 20px;
-    border-radius: 5px;
-    font-size: 1.5rem;
-}
-
-.w-input button {
-
-    height: 50px;
-    width: 20%;
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-    cursor: pointer;
-}
- */
 
 .jumbotron {
     
@@ -96,7 +43,3 @@ footer a {
   }
 
  
-/* .containerA{
-    width: 50%; 
-    
-} */
